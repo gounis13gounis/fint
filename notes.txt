@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/20526414/relative-strength-index-in-python-pandas
+//above there is code
