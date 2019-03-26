@@ -1,6 +1,7 @@
-from pylab import *
+import matplotlib.pylab as pylab
 import pandas_datareader
 import pandas as pd
+import datetime
 import numpy as np
 
 
@@ -26,8 +27,8 @@ def RSIfun(price, n=14):
     dUp, dDown =delta.copy(),delta.copy()
     dUp[dUp<0]=0
     dDown[dDown > 0] = 0
-    RolUp=pandas.rolling_mean(dUp,n)
-    RolDown=pandas.rolling_mean(dDown,n).abs
+    RolUp=pd.rolling_mean(dUp,n)
+    RolDown=pd.rolling_mean(dDown,n).abs
     RS = RolUp / RolDown
     rsi= 100.0 - (100.0 / (1.0 + RS))
     return rsi
